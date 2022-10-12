@@ -2,7 +2,7 @@
 #include <math.h>
 int main()
 {
-	//2 îêðóæíîñòè çàäàþòñÿ êîîðäèíàòàìè öåíòðîâ è ðàäèóñîâ. Îïðåäåëèòå âçàèìíîå ïîëîæåíèå ýòèõ îêðóæíîñòåé.
+ //2 Ð¾ÐºÑ€ÑƒÐ¶Ð½Ð¾ÑÑ‚Ð¸ Ð·Ð°Ð´Ð°ÑŽÑ‚ÑÑ ÐºÐ¾Ð¾Ñ€Ð´Ð¸Ð½Ð°Ñ‚Ð°Ð¼Ð¸ Ñ†ÐµÐ½Ñ‚Ñ€Ð¾Ð² Ð¸ Ñ€Ð°Ð´Ð¸ÑƒÑÐ¾Ð². ÐžÐ¿Ñ€ÐµÐ´ÐµÐ»Ð¸Ñ‚Ðµ Ð²Ð·Ð°Ð¸Ð¼Ð½Ð¾Ðµ Ð¿Ð¾Ð»Ð¾Ð¶ÐµÐ½Ð¸Ðµ ÑÑ‚Ð¸Ñ… Ð¾ÐºÑ€ÑƒÐ¶Ð½Ð¾ÑÑ‚ÐµÐ¹.
 	float r1, r2, x1, x2, y1, y2, d;
 	printf("Enter x1, y1\n");
 	scanf("%f %f", &x1, &y1);
@@ -11,35 +11,38 @@ int main()
 	printf("Enter r1,r2\n");
 	scanf("%f %f", &r1, &r2);
 	d = sqrt((x2 - x1) * (x2 - x1) + (y2 - y1) * (y2 - y1));
-	if (d > r1 + r2)
-	{
-		printf("No common points");
-		return 0;
-	}
-	if (d = r1 + r2)
-	{
-		printf("External touch");
-		return 0;
-	}
-	if ((d > r1 - r2) && (d < r1 + r2))
-	{
-		printf("Two common points(circles intersect)");
-		return 0;
-	}
-	if ((d > 0) && (d < r1 - r2))
-	{
-		printf("One circle is inscribed in another");
-		return 0;
-	}
-	if (d = r1 - r2)
-	{
-		printf("Inner touch");
-		return 0;
-	}
-	if ((x1 = x2) && (y1 = y2) && (r1 = r2))
-	{
-		printf("Circles coincide");
-		return 0;
-	}
+		if (d > r1 + r2)
+		{
+			printf("No common points");
+			return 0;
+		}
+		if (d == r1 + r2)
+		{
+			printf("External touch");
+			return 0;
+		}
+		if ((d > r1 - r2)&&(d < r1 + r2))
+		{
+			printf("Two common points(circles intersect)");
+			return 0;
+		}
+		if ((d >= 0) && (d < r1 - r2))
+		{
+			printf("One circle is inscribed in another");
+			return 0;
+		}
+		if (d == r1 - r2)
+		{
+			if ((x1 == x2) && (y1 == y2) && (r1 == r2))
+			{
+				printf("Circles coincide");
+				return 0;
+			}
+			else {
+				printf("Inner touch");
+				return 0;
+			}
+		}
+		
 	return 0;
 }

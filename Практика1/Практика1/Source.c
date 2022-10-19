@@ -1,13 +1,13 @@
-//табличные значения для ДСП: 650 кг/м^3, ДВП: 800 кг/м^3, дерева 550 кг/м^3//
+//ГІГ ГЎГ«ГЁГ·Г­Г»ГҐ Г§Г­Г Г·ГҐГ­ГЁГї Г¤Г«Гї Г„Г‘ГЏ: 650 ГЄГЈ/Г¬^3, Г„Г‚ГЏ: 800 ГЄГЈ/Г¬^3, Г¤ГҐГ°ГҐГўГ  550 ГЄГЈ/Г¬^3//
 #define _CRT_SECURE_NO_WARNINGS
 #include <stdio.h>
 int main()
 {
 	double h, w, d, back_wall, side_walls, lids, shelves, doors, a;
 	int i = 0;
-	printf("Enter cabinet dimensions in centimeters: height, width, depth: "); //запрос габаритов
-	scanf("%lf %lf %lf", &h, &w, &d); //ввод габаритов
-	if ((h < 180) || (h > 220) || (w < 80) || (w > 120) || (d < 50) || (d > 90)) //проверка
+	printf("Enter cabinet dimensions in centimeters: height, width, depth:\n "); //Г§Г ГЇГ°Г®Г± ГЈГ ГЎГ Г°ГЁГІГ®Гў
+	scanf("%lf %lf %lf", &h, &w, &d); //ГўГўГ®Г¤ ГЈГ ГЎГ Г°ГЁГІГ®Гў
+	if ((h < 180) || (h > 220) || (w < 80) || (w > 120) || (d < 50) || (d > 90)) //ГЇГ°Г®ГўГҐГ°ГЄГ 
 	{
 		printf("Data entered incorrectly");
 		return 1;
@@ -19,7 +19,7 @@ int main()
 	back_wall = h * w * 0.005 * 800;
 	side_walls = h * d * 0.015 * 650 * 2;
 	lids = w * d * 0.015 * 650 * 2;
-	while (a >= 40) //количество полок
+	while (a >= 40) //ГЄГ®Г«ГЁГ·ГҐГ±ГІГўГ® ГЇГ®Г«Г®ГЄ
 	{
 		a = a - 40;
 		i++;

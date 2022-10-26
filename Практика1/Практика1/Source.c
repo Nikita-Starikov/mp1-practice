@@ -17,7 +17,7 @@ int main()
 	w = w * 0.01;
 	d = d * 0.01;
 	back_wall = h * w * 0.005 * 800;
-	side_walls = h * d * 0.015 * 650 * 2;
+	side_walls = (h - 0.03) * d * 0.015 * 650 * 2;
 	lids = w * d * 0.015 * 650 * 2;
 	while (a >= 40) //êîëè÷åñòâî ïîëîê
 	{
